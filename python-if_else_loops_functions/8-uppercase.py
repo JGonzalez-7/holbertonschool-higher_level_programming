@@ -2,10 +2,11 @@
 # Print a string converted to uppercase using ASCII values
 
 def uppercase(str):
+    result = ""
     for c in str:
         # Convert lowercase letters to uppercase using ASCII math
         if ord(c) >= 97 and ord(c) <= 122:
-            print("{:c}".format(ord(c) - 32), end="")
+            result += "{:c}".format(ord(c) - 32)
         else:
-            print("{}".format(c), end="")
-    print()
+            result += "{}".format(c)
+    print("{}".format(result))
