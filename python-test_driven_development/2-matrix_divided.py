@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 # Divides all elements of a matrix by a given number with strict validation
 
-"""Defines matrix_divided(matrix, div)."""
+"""Defines matrix_divided."""
 
 
 def matrix_divided(matrix, div):
-    """Return a new matrix with each element divided by div (rounded to 2 dp)."""
+    """Divide all matrix elements by div and round to 2 decimals."""
 
     if (not isinstance(matrix, list) or len(matrix) == 0 or
             not all(isinstance(row, list) for row in matrix)):
