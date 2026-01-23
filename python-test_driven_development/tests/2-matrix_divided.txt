@@ -8,8 +8,16 @@
 >>> matrix
 [[1, 2, 3], [4, 5, 6]]
 
->>> matrix_divided([[1, 2], [3, 4]], 2)
-[[0.5, 1.0], [1.5, 2.0]]
+>>> matrix_divided([[1, 2], [3, 4]], "x")
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+>>> matrix_divided([[1, 2], [3, 4]], float('inf'))
+[[0.0, 0.0], [0.0, 0.0]]
+
+>>> matrix_divided([[]], 5)
+[[]]
 
 >>> matrix_divided([[1, "a"], [3, 4]], 2)
 Traceback (most recent call last):
