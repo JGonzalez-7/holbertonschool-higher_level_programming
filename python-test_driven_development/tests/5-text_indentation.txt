@@ -2,26 +2,25 @@
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
 >>> text_indentation("Hello. World?")
-Hello
+Hello.
 <BLANKLINE>
-World
+World?
 <BLANKLINE>
 
 >>> text_indentation("Python: is fun.")
-Python
+Python:
 <BLANKLINE>
-is fun
+is fun.
 <BLANKLINE>
 
 >>> text_indentation(" No leading space. And no trailing space? ")
-No leading space
+No leading space.
 <BLANKLINE>
-And no trailing space
+And no trailing space?
 <BLANKLINE>
 
 >>> text_indentation("")
 >>> text_indentation("One sentence")
-
 One sentence
 
 >>> text_indentation(123)
