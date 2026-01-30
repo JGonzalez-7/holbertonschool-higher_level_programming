@@ -1,21 +1,22 @@
 # Python - Classes and Objects
 
-Intro project on basic object-oriented programming in Python using a `Square` class as the running example.
+Intro project on Python OOP using a `Square` class to practice private attributes, validation, properties, and custom printing.
 
-## Files present
-- `0-square.py`: empty `Square` class (starter stub).
-- `1-square.py`: skeleton for initializing a square with a private `size`.
-- `2-square.py`: placeholder for size validation (`int`, `>= 0`).
-- `3-square.py`: placeholder for an `area()` method.
-- `4-square.py`: placeholder for a size property with getter/setter validation.
-- `5-square.py`: placeholder for `my_print()` to draw the square with `#`.
-- `6-square.py`: placeholder for handling a `position` offset when printing.
+## Files
+- `0-square.py`: defines an empty `Square` class.
+- `1-square.py`: `Square` with a private `__size` set on init (no validation).
+- `2-square.py`: adds size validation (`int`, `>= 0`) before storing `__size`.
+- `3-square.py`: adds `area()` method returning `size ** 2`.
+- `4-square.py`: exposes `size` as a property with validation in the setter.
+- `5-square.py`: adds `my_print()` to draw the square with `#` (prints a blank line when size is 0).
+- `6-square.py`: extends print behavior with a `position` tuple offset (`(x, y)` spaces/newlines) and validates both attributes.
 
 ## Usage examples
 ```bash
-# Example with completed tasks (once implementations are added)
+# Compute area
 python3 -c "from 3-square import Square; s = Square(5); print(s.area())"
 
+# Print with position offset
 python3 -c "from 6-square import Square; s = Square(3, (1, 2)); s.my_print()"
 ```
 
@@ -24,5 +25,5 @@ python3 -c "from 6-square import Square; s = Square(3, (1, 2)); s.my_print()"
 - `pycodestyle` 2.8.* for linting.
 
 ## Notes
-- Each script should start with `#!/usr/bin/python3`.
-- Keep classes self-contained; do not execute test code on import.
+- Each script begins with `#!/usr/bin/python3`.
+- Classes are import-safe; no top-level execution code.
