@@ -1,18 +1,18 @@
 # Python - More Classes and Objects
 
-Exercises that deepen class mechanics with a `Rectangle` class: validation, string representations, class attributes, static/class methods, and alternative constructors.
+Exercises that deepen class mechanics with a `Rectangle` class: validation, printable representations, class attributes, static/class methods, and alternative constructors.
 
 ## Files
 - `0-rectangle.py`: empty `Rectangle` class (starter stub).
-- `1-rectangle.py`: initializer with private `width`/`height` plus validation (`int`, `>= 0`).
+- `1-rectangle.py`: initializer with private `width`/`height` and validation (`int`, `>= 0`).
 - `2-rectangle.py`: adds `area()` and `perimeter()` methods.
-- `3-rectangle.py`: implements `__str__` to print the rectangle with `#` and `__repr__` to recreate it.
-- `4-rectangle.py`: improves `__repr__` for eval-style recreation.
-- `5-rectangle.py`: prints a farewell message when an instance is deleted.
-- `6-rectangle.py`: class attribute `number_of_instances` tracks live rectangles.
-- `7-rectangle.py`: class attribute `print_symbol` customizes the drawing character.
-- `8-rectangle.py`: static method `bigger_or_equal(rect_1, rect_2)` returns the larger rectangle by area.
-- `9-rectangle.py`: class method `square(cls, size=0)` returns a new square-shaped `Rectangle`.
+- `3-rectangle.py`: implements `__str__` to draw the rectangle with `#`.
+- `4-rectangle.py`: adds `__repr__` that can recreate the instance.
+- `5-rectangle.py`: adds `__del__` that prints "Bye rectangle..." on deletion.
+- `6-rectangle.py`: class attribute `number_of_instances` tracks live rectangles (updated on create/delete).
+- `7-rectangle.py`: class attribute `print_symbol` customizes the drawing character used by `__str__`.
+- `8-rectangle.py`: static method `bigger_or_equal(rect_1, rect_2)` returns the rectangle with the larger area (or the first if equal).
+- `9-rectangle.py`: class method `square(cls, size=0)` returns a new square-shaped `Rectangle`; carries over `print_symbol` and instance counting.
 
 ## Usage examples
 ```bash
