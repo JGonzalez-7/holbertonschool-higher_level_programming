@@ -31,10 +31,7 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
         body_str = json.dumps(payload)
         body = body_str.encode("utf-8")
         self.send_response(status_code)
-        self.send_header(
-            "Content-Type",
-            "application/json; charset=utf-8"
-        )
+        self.send_header("Content-Type", "application/json")
         self.send_header("Content-Length", str(len(body)))
         self.end_headers()
         self.wfile.write(body)
@@ -42,8 +39,7 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         """Handle GET requests."""
         if self.path == "/":
-            self._send_text(200,
-                            "Hello, this is a simple API!")
+            self._send_text(200, "Hello, this is a simple API!")
             return
 
         if self.path == "/status":
@@ -62,8 +58,7 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
         if self.path == "/info":
             info = {
                 "version": "1.0",
-                "description":
-                    "A simple API built with http.server"
+                "description": "A simple API built with http.server"
             }
             self._send_json(200, info)
             return
@@ -75,7 +70,7 @@ def run_server():
     """Start the HTTP server."""
     server = HTTPServer((HOST, PORT), SimpleAPIHandler)
     print(
-        f"Server running on "
+        "Server running on "
         f"http://localhost:{PORT}"
     )
     server.serve_forever()
