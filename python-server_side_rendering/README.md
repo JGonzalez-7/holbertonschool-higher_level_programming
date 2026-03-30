@@ -140,7 +140,7 @@ Behavior:
 
 ## Notes
 
-- All Flask apps run on port `5500` with `debug=True`.
+- All Flask apps run on port `5000` with `debug=True`.
 - `task_04_db.py` expects a SQLite database file named `products.db`.
 - `products_populate.py` creates the `Products` table and inserts two sample rows: `Laptop` and `Coffee Mug`.
 - `product_display.html` renders a table when products are available and an error message otherwise.
