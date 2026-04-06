@@ -282,4 +282,4 @@ False
 My main takeaway from this project is that Python stays consistent once you view everything through objects and references. The examples from this directory make that very clear: some comparisons return `True` because values match, others return `False` because the objects are different, list updates can affect every alias, and reassignment inside a function may leave the original object untouched. Once I started reading Python that way, mutable and immutable behavior stopped feeling random and started feeling logical.
 
 ## URLs
-- LinkedIn share URL: https://www.linkedin.com/in/joshua-gonzalez-398b73267/
+- LinkedIn share URL: https://www.linkedin.com/feed/update/urn:li:share:7446726510876622848/
